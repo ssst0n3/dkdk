@@ -1,13 +1,13 @@
 package database
 
 import (
-	"dkdk/model"
-	"dkdk/model/node"
 	"errors"
 	"fmt"
 	"github.com/opencontainers/go-digest"
 	"github.com/ssst0n3/awesome_libs/awesome_error"
 	"github.com/ssst0n3/awesome_libs/slice"
+	"github.com/ssst0n3/dkdk/model"
+	"github.com/ssst0n3/dkdk/model/node"
 	"gorm.io/gorm"
 	"time"
 )

@@ -1,13 +1,13 @@
 package router
 
 import (
-	v1 "dkdk/api/v1"
-	"dkdk/config"
-	"dkdk/docs"
 	"fmt"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
+	v1 "github.com/ssst0n3/dkdk/api/v1"
+	"github.com/ssst0n3/dkdk/config"
+	"github.com/ssst0n3/dkdk/docs"
 	"github.com/swaggo/files"
 	"github.com/swaggo/gin-swagger"
 	"net/http"

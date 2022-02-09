@@ -1,9 +1,9 @@
 package driver
 
 import (
-	"dkdk/model"
 	"github.com/docker/distribution/manifest/schema2"
 	"github.com/opencontainers/go-digest"
+	"github.com/ssst0n3/dkdk/model"
 	"io"
 )
 

@@ -1,8 +1,8 @@
 package test_db
 
 import (
-	"dkdk/test/test_config"
 	"github.com/ssst0n3/awesome_libs/awesome_error"
+	"github.com/ssst0n3/dkdk/test/test_config"
 	"github.com/ssst0n3/lightweight_api"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

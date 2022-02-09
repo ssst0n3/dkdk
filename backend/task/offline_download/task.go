@@ -1,12 +1,12 @@
 package offline_download
 
 import (
-	"dkdk/database"
-	"dkdk/model"
 	"fmt"
 	"github.com/google/uuid"
 	"github.com/ssst0n3/awesome_libs/awesome_error"
 	"github.com/ssst0n3/awesome_libs/log"
+	"github.com/ssst0n3/dkdk/database"
+	"github.com/ssst0n3/dkdk/model"
 	"os"
 )
 

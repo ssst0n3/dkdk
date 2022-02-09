@@ -1,10 +1,10 @@
 package v1
 
 import (
-	"dkdk/api/v1/repository"
-	"dkdk/database"
-	"dkdk/model"
 	"github.com/gin-gonic/gin"
+	"github.com/ssst0n3/dkdk/api/v1/repository"
+	"github.com/ssst0n3/dkdk/database"
+	"github.com/ssst0n3/dkdk/model"
 	"github.com/ssst0n3/lightweight_api"
 	"github.com/ssst0n3/lightweight_api/response"
 	"net/http"

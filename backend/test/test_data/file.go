@@ -1,8 +1,8 @@
 package test_data
 
 import (
-	"dkdk/model"
 	"github.com/opencontainers/go-digest"
+	"github.com/ssst0n3/dkdk/model"
 	"gorm.io/gorm"
 	"time"
 )
@@ -15,7 +15,7 @@ var (
 		FileItem: model.FileItem{
 			FileIdentifier: model.FileIdentifier{
 				Filename: "FileA",
-				Digest: digest.FromString("A"),
+				Digest:   digest.FromString("A"),
 			},
 			Size: 1000,
 		},
@@ -28,7 +28,7 @@ var (
 		FileItem: model.FileItem{
 			FileIdentifier: model.FileIdentifier{
 				Filename: "FileB",
-				Digest: digest.FromString("B"),
+				Digest:   digest.FromString("B"),
 			},
 			Size: 1000,
 		},

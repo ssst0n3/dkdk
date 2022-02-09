@@ -1,14 +1,14 @@
 package test
 
 import (
-	"dkdk/model"
-	"dkdk/registry/v2/driver"
-	"dkdk/registry/v2/driver/pure"
-	"dkdk/registry/v2/driver/reg"
-	"dkdk/test/test_config"
 	"github.com/opencontainers/go-digest"
 	"github.com/sirupsen/logrus"
 	"github.com/ssst0n3/awesome_libs/log"
+	"github.com/ssst0n3/dkdk/model"
+	"github.com/ssst0n3/dkdk/registry/v2/driver"
+	"github.com/ssst0n3/dkdk/registry/v2/driver/pure"
+	"github.com/ssst0n3/dkdk/registry/v2/driver/reg"
+	"github.com/ssst0n3/dkdk/test/test_config"
 	"github.com/stretchr/testify/assert"
 	"io/ioutil"
 	"strings"

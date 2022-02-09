@@ -2,7 +2,6 @@ package oras
 
 import (
 	"context"
-	"dkdk/registry/v2/service_provider/huaweicloud"
 	"fmt"
 	"github.com/containerd/containerd/images"
 	"github.com/containerd/containerd/remotes"
@@ -15,6 +14,7 @@ import (
 	ocispec "github.com/opencontainers/image-spec/specs-go/v1"
 	"github.com/ssst0n3/awesome_libs/awesome_error"
 	"github.com/ssst0n3/awesome_libs/log"
+	"github.com/ssst0n3/dkdk/registry/v2/service_provider/huaweicloud"
 	"net/http"
 	"sync"
 )
@@ -97,9 +97,8 @@ func (d Driver) Upload(ref, fileName string, fileContent []byte) (err error) {
 		//descM,
 	}
 	log.Logger.Infof("Pushing %s to %s...", fileName, ref)
-	desc, err = oras.Push(d.Context, d.Resolver, ref, memoryStore, pushContents,
-		//oras.WithConfigMediaType("application/vnd.docker.container.image.v1+json"),
-	)
+	desc, err = oras.Push(d.Context, d.Resolver, ref, memoryStore, pushContents) //oras.WithConfigMediaType("application/vnd.docker.container.image.v1+json"),
+
 	if err != nil {
 		awesome_error.CheckErr(err)
 		return

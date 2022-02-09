@@ -1,9 +1,9 @@
 package v1
 
 import (
-	"dkdk/api/v1/repository"
 	"github.com/gin-gonic/gin"
 	"github.com/ssst0n3/awesome_libs/cipher"
+	"github.com/ssst0n3/dkdk/api/v1/repository"
 	"github.com/ssst0n3/lightweight_api/example/resource/auth"
 	"github.com/ssst0n3/lightweight_api/example/resource/initialize"
 	"github.com/ssst0n3/lightweight_api/example/resource/kv_config"

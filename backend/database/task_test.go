@@ -1,9 +1,9 @@
 package database
 
 import (
-	"dkdk/model"
-	"dkdk/test/test_data"
-	"dkdk/test/test_db"
+	"github.com/ssst0n3/dkdk/model"
+	"github.com/ssst0n3/dkdk/test/test_data"
+	"github.com/ssst0n3/dkdk/test/test_db"
 	"github.com/stretchr/testify/assert"
 	"testing"
 	"time"

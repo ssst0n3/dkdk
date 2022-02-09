@@ -1,10 +1,10 @@
 package model
 
 import (
-	"dkdk/model/node"
-	"dkdk/model/util"
 	"github.com/opencontainers/go-digest"
 	"github.com/ssst0n3/awesome_libs/awesome_error"
+	"github.com/ssst0n3/dkdk/model/node"
+	"github.com/ssst0n3/dkdk/model/util"
 	"gorm.io/gorm"
 	"gorm.io/gorm/schema"
 	"time"

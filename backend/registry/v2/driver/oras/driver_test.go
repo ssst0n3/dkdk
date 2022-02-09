@@ -1,10 +1,10 @@
 package oras
 
 import (
-	"dkdk/registry/v2/service_provider/huaweicloud"
-	"dkdk/test/test_config"
 	"fmt"
 	"github.com/containerd/containerd/remotes"
+	"github.com/ssst0n3/dkdk/registry/v2/service_provider/huaweicloud"
+	"github.com/ssst0n3/dkdk/test/test_config"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

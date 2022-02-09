@@ -1,9 +1,9 @@
 package v1
 
 import (
-	"dkdk/database"
-	"dkdk/model/node"
 	"github.com/gin-gonic/gin"
+	"github.com/ssst0n3/dkdk/database"
+	"github.com/ssst0n3/dkdk/model/node"
 	"github.com/ssst0n3/lightweight_api"
 	"github.com/ssst0n3/lightweight_api/response"
 )

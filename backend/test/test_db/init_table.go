@@ -1,11 +1,11 @@
 package test_db
 
 import (
-	"dkdk/model"
-	"dkdk/model/node"
-	"dkdk/test/test_common"
-	"dkdk/test/test_data"
 	"github.com/ssst0n3/awesome_libs/awesome_error"
+	"github.com/ssst0n3/dkdk/model"
+	"github.com/ssst0n3/dkdk/model/node"
+	"github.com/ssst0n3/dkdk/test/test_common"
+	"github.com/ssst0n3/dkdk/test/test_data"
 	"github.com/ssst0n3/lightweight_api/example/resource/user"
 	model2 "github.com/ssst0n3/lightweight_api/example/resource/user/model"
 )

@@ -1,10 +1,10 @@
 package repository
 
 import (
-	"dkdk/model"
-	"dkdk/registry/v2/driver"
 	"github.com/gin-gonic/gin"
 	"github.com/opencontainers/go-digest"
+	"github.com/ssst0n3/dkdk/model"
+	"github.com/ssst0n3/dkdk/registry/v2/driver"
 	"github.com/ssst0n3/lightweight_api"
 	"github.com/ssst0n3/lightweight_api/response"
 )

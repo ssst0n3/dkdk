@@ -1,10 +1,10 @@
 package repository
 
 import (
-	"dkdk/test/test_data"
-	"dkdk/test/test_db"
 	"github.com/gin-gonic/gin"
 	"github.com/opencontainers/go-digest"
+	"github.com/ssst0n3/dkdk/test/test_data"
+	"github.com/ssst0n3/dkdk/test/test_db"
 	"github.com/ssst0n3/lightweight_api"
 	"github.com/stretchr/testify/assert"
 	"net/http"

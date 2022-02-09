@@ -1,4 +1,4 @@
-module dkdk
+module github.com/ssst0n3/dkdk
 
 go 1.15
 
