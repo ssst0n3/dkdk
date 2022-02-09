@@ -1,0 +1,54 @@
+version: '3'
+services:
+  dkdk:
+    depends_on:
+      - secret
+    image: swr.cn-south-1.myhuaweicloud.com/dkdk/dkdk:v0.2
+    restart: always
+    ports:
+      - "14000:14000"
+    environment:
+      LOCAL_LISTEN_PORT: 14000
+      WAIT_HOSTS: db:3306
+      WAIT_HOSTS_TIMEOUT: 300
+      WAIT_SLEEP_INTERVAL: 5
+      WAIT_HOST_CONNECT_TIMEOUT: 5
+      DB_DRIVER_NAME: mysql
+      DB_NAME: dkdk
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: dkdk
+      DB_PASSWORD_FILE: /secret/MYSQL_PASSWORD_FILE
+      DIR_SECRET: /secret
+      CERT_NAME: GIN_TLS
+    volumes:
+      - dkdk_secret:/secret
+  secret:
+    image: ssst0n3/docker_secret:v1.4.1
+    environment:
+      - "DIR_SECRET=/secret"
+      - "SECRET=MYSQL_PASSWORD_FILE,MYSQL_ROOT_PASSWORD_FILE,CERT_GIN_TLS,lightweight_api"
+    volumes:
+      - dkdk_secret:/secret
+  db:
+    depends_on:
+      - secret
+    image: mysql:8
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    volumes:
+#      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+#      - ./db/data:/tmp/data
+      - dkdk_db:/var/lib/mysql
+      - dkdk_secret:/secret
+    environment:
+      MYSQL_ROOT_PASSWORD_FILE: /secret/MYSQL_ROOT_PASSWORD_FILE
+      MYSQL_PASSWORD_FILE: /secret/MYSQL_PASSWORD_FILE
+      MYSQL_USER: dkdk
+      MYSQL_DATABASE: dkdk
+    ports:
+      - "14306:3306"
+
+volumes:
+  dkdk_db:
+  dkdk_secret:

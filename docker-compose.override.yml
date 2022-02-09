@@ -1,0 +1,22 @@
+version: '3'
+services:
+  secret:
+    environment:
+      - "DEVELOPMENT=true"
+    volumes:
+      - /tmp/secret:/tmp/secret
+  dkdk:
+    build: .
+    environment:
+      ALLOW_ORIGINS: "http://127.0.0.1:8080,http://127.0.0.1:8081"
+      CERT_NAME:
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "14002:8080"
+  registry_for_test:
+    image: registry
+    restart: always
+    ports:
+      - "14005:5000"
