@@ -1,7 +1,7 @@
 FROM golang:1.16-alpine AS backend
 #ENV GOPROXY="https://proxy.golang.org"
 ENV GOPROXY="https://goproxy.cn,https://goproxy.io,direct"
-COPY backend /build
+COPY . /build
 WORKDIR /build
 # swaggo
 #RUN GO111MODULE="on" GOPROXY=$GOPROXY go get -u github.com/swaggo/swag/cmd/swag
