@@ -1,8 +1,8 @@
 package test_data
 
 import (
-	"dkdk/model"
 	"github.com/opencontainers/go-digest"
+	"github.com/ssst0n3/dkdk/model"
 	"gorm.io/gorm"
 )
 

@@ -1,9 +1,9 @@
 package database
 
 import (
-	"dkdk/model"
 	"github.com/opencontainers/go-digest"
 	"github.com/ssst0n3/awesome_libs/awesome_error"
+	"github.com/ssst0n3/dkdk/model"
 	"gorm.io/gorm"
 )
 

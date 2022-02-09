@@ -1,8 +1,8 @@
 package test_db
 
 import (
-	"dkdk/test/test_data"
 	"github.com/ssst0n3/awesome_libs/cipher"
+	"github.com/ssst0n3/dkdk/test/test_data"
 	"github.com/ssst0n3/lightweight_api/example/resource/user/model"
 	"github.com/stretchr/testify/assert"
 	"testing"

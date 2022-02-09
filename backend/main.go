@@ -1,13 +1,13 @@
 package main
 
 import (
-	"dkdk/config"
-	"dkdk/database"
-	"dkdk/router"
-	"dkdk/task/offline_download"
 	"fmt"
 	"github.com/ssst0n3/awesome_libs/awesome_error"
 	"github.com/ssst0n3/awesome_libs/log"
+	"github.com/ssst0n3/dkdk/config"
+	"github.com/ssst0n3/dkdk/database"
+	"github.com/ssst0n3/dkdk/router"
+	"github.com/ssst0n3/dkdk/task/offline_download"
 	"github.com/ssst0n3/docker_secret/cert"
 )
 

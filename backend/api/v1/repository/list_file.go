@@ -1,12 +1,12 @@
 package repository
 
 import (
-	"dkdk/database"
-	"dkdk/model"
-	"dkdk/registry/v2/driver/reg"
 	"github.com/gin-gonic/gin"
 	"github.com/opencontainers/go-digest"
 	ocispec "github.com/opencontainers/image-spec/specs-go/v1"
+	"github.com/ssst0n3/dkdk/database"
+	"github.com/ssst0n3/dkdk/model"
+	"github.com/ssst0n3/dkdk/registry/v2/driver/reg"
 	"github.com/ssst0n3/lightweight_api"
 	"net/http"
 )

@@ -2,9 +2,9 @@ package v1
 
 import (
 	"bytes"
-	"dkdk/test"
-	"dkdk/test/test_data"
 	"encoding/json"
+	"github.com/ssst0n3/dkdk/test"
+	"github.com/ssst0n3/dkdk/test/test_data"
 	"github.com/ssst0n3/lightweight_api"
 	"github.com/stretchr/testify/assert"
 	"net/http"
@@ -21,4 +21,3 @@ func TestBatchCreateTask(t *testing.T) {
 	w := lightweight_api.ObjectOperate(req, router)
 	assert.Equal(t, http.StatusOK, w.Code)
 }
-

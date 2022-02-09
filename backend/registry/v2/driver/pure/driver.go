@@ -2,13 +2,13 @@ package pure
 
 import (
 	"bytes"
-	"dkdk/model"
-	"dkdk/registry/v2/driver/util"
 	"errors"
 	"fmt"
 	"github.com/docker/distribution/manifest/schema2"
 	"github.com/opencontainers/go-digest"
 	"github.com/ssst0n3/awesome_libs/awesome_error"
+	"github.com/ssst0n3/dkdk/model"
+	"github.com/ssst0n3/dkdk/registry/v2/driver/util"
 	"github.com/ssst0n3/registry_v2_client/registry"
 	"io"
 )

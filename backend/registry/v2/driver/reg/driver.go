@@ -3,7 +3,6 @@ package reg
 import (
 	"bytes"
 	"context"
-	"dkdk/model"
 	"github.com/docker/distribution"
 	"github.com/docker/distribution/manifest/schema2"
 	"github.com/docker/docker/api/types"
@@ -11,6 +10,7 @@ import (
 	"github.com/opencontainers/go-digest"
 	ocispec "github.com/opencontainers/image-spec/specs-go/v1"
 	"github.com/ssst0n3/awesome_libs/awesome_error"
+	"github.com/ssst0n3/dkdk/model"
 	"io"
 	"net/http"
 )

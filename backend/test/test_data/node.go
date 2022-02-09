@@ -1,7 +1,7 @@
 package test_data
 
 import (
-	"dkdk/model/node"
+	"github.com/ssst0n3/dkdk/model/node"
 	"gorm.io/gorm"
 )
 

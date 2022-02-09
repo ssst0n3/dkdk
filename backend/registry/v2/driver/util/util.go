@@ -1,12 +1,12 @@
 package util
 
 import (
-	"dkdk/model"
-	"dkdk/registry/v2/driver"
 	"github.com/docker/distribution/manifest/schema2"
 	"github.com/opencontainers/go-digest"
 	ocispec "github.com/opencontainers/image-spec/specs-go/v1"
 	"github.com/ssst0n3/awesome_libs/awesome_error"
+	"github.com/ssst0n3/dkdk/model"
+	"github.com/ssst0n3/dkdk/registry/v2/driver"
 )
 
 func GetSizeByDigestFromManifest(digest string, manifest schema2.Manifest) (size int64, exists bool) {
@@ -45,9 +45,8 @@ func ListFile(d driver.Driver, repository model.RepositoryBasic) (fileItems []mo
 				Filename: filename,
 				Digest:   layer.Digest,
 			},
-			Size:     layer.Size,
+			Size: layer.Size,
 		})
 	}
 	return
 }
-

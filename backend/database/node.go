@@ -1,9 +1,9 @@
 package database
 
 import (
-	"dkdk/model/node"
 	"github.com/ssst0n3/awesome_libs"
 	"github.com/ssst0n3/awesome_libs/awesome_error"
+	"github.com/ssst0n3/dkdk/model/node"
 )
 
 func JoinNodeUnderDir(fileTable string) (joinQuery, selectQuery string) {

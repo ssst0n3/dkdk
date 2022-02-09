@@ -1,9 +1,9 @@
 package repository
 
 import (
-	"dkdk/database"
-	"dkdk/test/test_config"
 	"github.com/gin-gonic/gin"
+	"github.com/ssst0n3/dkdk/database"
+	"github.com/ssst0n3/dkdk/test/test_config"
 )
 
 var router = gin.Default()

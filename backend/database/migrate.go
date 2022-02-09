@@ -1,10 +1,10 @@
 package database
 
 import (
-	modelDkDk "dkdk/model"
-	"dkdk/model/node"
 	"github.com/ssst0n3/awesome_libs/awesome_error"
 	"github.com/ssst0n3/awesome_libs/awesome_reflect"
+	modelDkDk "github.com/ssst0n3/dkdk/model"
+	"github.com/ssst0n3/dkdk/model/node"
 	modelKV "github.com/ssst0n3/lightweight_api/example/resource/kv_config/model"
 	modelUser "github.com/ssst0n3/lightweight_api/example/resource/user/model"
 )

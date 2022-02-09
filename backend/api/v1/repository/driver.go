@@ -1,15 +1,15 @@
 package repository
 
 import (
-	"dkdk/database"
-	"dkdk/model"
-	"dkdk/registry/v2/driver"
-	"dkdk/registry/v2/driver/pure"
-	"dkdk/registry/v2/driver/reg"
 	"encoding/json"
 	"errors"
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
+	"github.com/ssst0n3/dkdk/database"
+	"github.com/ssst0n3/dkdk/model"
+	"github.com/ssst0n3/dkdk/registry/v2/driver"
+	"github.com/ssst0n3/dkdk/registry/v2/driver/pure"
+	"github.com/ssst0n3/dkdk/registry/v2/driver/reg"
 	"github.com/ssst0n3/lightweight_api"
 	"net/http"
 )

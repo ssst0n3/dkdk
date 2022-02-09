@@ -1,12 +1,12 @@
 package v1
 
 import (
-	"dkdk/database"
-	"dkdk/model"
-	"dkdk/task/offline_download"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/ssst0n3/awesome_libs/awesome_error"
+	"github.com/ssst0n3/dkdk/database"
+	"github.com/ssst0n3/dkdk/model"
+	"github.com/ssst0n3/dkdk/task/offline_download"
 	"github.com/ssst0n3/lightweight_api"
 	"github.com/ssst0n3/lightweight_api/response"
 	"net/http"

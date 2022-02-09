@@ -2,13 +2,13 @@ package v1
 
 import (
 	"bytes"
-	"dkdk/database"
-	"dkdk/model/node"
-	"dkdk/test"
-	"dkdk/test/test_data"
-	"dkdk/test/test_db"
 	"encoding/json"
 	"fmt"
+	"github.com/ssst0n3/dkdk/database"
+	"github.com/ssst0n3/dkdk/model/node"
+	"github.com/ssst0n3/dkdk/test"
+	"github.com/ssst0n3/dkdk/test/test_data"
+	"github.com/ssst0n3/dkdk/test/test_db"
 	"github.com/ssst0n3/lightweight_api"
 	"github.com/stretchr/testify/assert"
 	"net/http"

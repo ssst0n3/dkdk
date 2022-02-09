@@ -1,8 +1,8 @@
 package database
 
 import (
-	"dkdk/model"
 	"github.com/ssst0n3/awesome_libs/awesome_error"
+	"github.com/ssst0n3/dkdk/model"
 )
 
 func ListRepositoryForResponse(userId uint) (result []model.RepositoryConfigResponse, err error) {

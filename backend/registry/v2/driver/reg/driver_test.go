@@ -1,11 +1,11 @@
 package reg
 
 import (
-	"dkdk/model"
-	"dkdk/test/test_config"
 	"github.com/google/uuid"
 	"github.com/opencontainers/go-digest"
 	"github.com/ssst0n3/awesome_libs/log"
+	"github.com/ssst0n3/dkdk/model"
+	"github.com/ssst0n3/dkdk/test/test_config"
 	"github.com/stretchr/testify/assert"
 	"strings"
 	"testing"
