@@ -129,3 +129,9 @@ func TestUpdateFileDownloadCount(t *testing.T) {
 		assert.Equal(t, uint(1), file.DownloadCount)
 	})
 }
+
+func TestCheckFilenameAlreadyExists(t *testing.T) {
+	exists, err := CheckFilenameAlreadyExists("not_exists")
+	assert.NoError(t, err)
+	assert.False(t, exists)
+}

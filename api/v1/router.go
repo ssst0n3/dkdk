@@ -52,6 +52,7 @@ func InitRouter(router *gin.Engine) {
 	{
 		fileGroup.GET("", FileResource.ListResource)
 		fileGroup.GET("/:id", ListFileUnderDir)
+		fileGroup.GET("/exists", CheckFilenameAlreadyExists)
 		fileGroup.POST("/repository/:id", UploadRepositoryFileToDirectory)
 	}
 
