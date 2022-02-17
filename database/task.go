@@ -36,10 +36,7 @@ func ListTaskByUserId(id, page, size uint) (tasks []model.Task, err error) {
 BatchCreateTask
 Make sure user exists by you self.
 */
-func BatchCreateTask(tasks []model.Task, userId uint) (err error) {
-	for i := range tasks {
-		tasks[i].UserId = userId
-	}
+func BatchCreateTask(tasks []model.Task) (err error) {
 	err = DB.Create(&tasks).Error
 	awesome_error.CheckErr(err)
 	return

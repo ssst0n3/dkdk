@@ -33,16 +33,6 @@ func TestListTaskByUserId(t *testing.T) {
 	})
 }
 
-func TestBatchCreateTask(t *testing.T) {
-	assert.NoError(t, test_db.MakeTaskEmpty())
-	userNotExists := uint(9999)
-	assert.NoError(t, BatchCreateTask(test_data.Tasks, userNotExists))
-	tasks, err := ListTaskByUserId(userNotExists, 0, 0)
-	assert.NoError(t, err)
-	assert.Equal(t, len(test_data.Tasks), len(tasks))
-	assert.Equal(t, userNotExists, tasks[0].UserId)
-}
-
 func TestUpdateTaskStatus(t *testing.T) {
 	assert.NoError(t, test_db.InitTask())
 	assert.NotEqual(t, model.TaskStatusDone, test_data.Task1.ID)
