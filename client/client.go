@@ -80,7 +80,7 @@ func (c *DkdkClient) BatchTaskCreate(tasks []model.TaskCore) (err error) {
 }
 
 func (c *DkdkClient) CheckFileAlreadyExists(filename string) (exists bool, err error) {
-	route := fmt.Sprintf("%s://%s%s", c.protocol, c.Domain, v1.FileResource.BaseRelativePath)
+	route := fmt.Sprintf("%s://%s%s/exists", c.protocol, c.Domain, v1.FileResource.BaseRelativePath)
 	u, err := url.Parse(route)
 	if err != nil {
 		awesome_error.CheckErr(err)
