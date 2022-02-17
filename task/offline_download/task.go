@@ -79,7 +79,8 @@ func OfflineDownload(task model.Task) (err error) {
 				},
 				Size: size,
 			},
-			DirectoryId: task.DirectoryInDkdk,
+			FilenameInRepository: task.Filename,
+			DirectoryId:          task.DirectoryInDkdk,
 		}
 		_, err = database.UploadRepositoryFile(task.RepositoryId, task.UserId, body, password)
 		if err != nil {
