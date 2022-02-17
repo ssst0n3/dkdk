@@ -41,7 +41,7 @@ func ListFileUnderDir(c *gin.Context) {
 }
 
 func CheckFilenameAlreadyExists(c *gin.Context) {
-	filename := c.Param("filename")
+	filename := c.Query("filename")
 	if filename == "" {
 		lightweight_api.HandleStatusBadRequestError(c, fmt.Errorf("filename cannot be empty"))
 		return
