@@ -1,9 +1,14 @@
 package client
 
 import (
+	"bytes"
+	"encoding/json"
 	"fmt"
 	"github.com/ssst0n3/awesome_libs/awesome_error"
 	"github.com/ssst0n3/awesome_libs/log"
+	v1 "github.com/ssst0n3/dkdk/api/v1"
+	"github.com/ssst0n3/dkdk/api/v1/repository"
+	"github.com/ssst0n3/dkdk/model"
 	"github.com/ssst0n3/lightweight_api/example/resource/auth"
 	"io/ioutil"
 	"net/http"
@@ -41,7 +46,7 @@ func NewDkdkClient(domain, username, password string, insecure bool) (client *Dk
 }
 
 func (c *DkdkClient) RepositoryList() (err error) {
-	url := fmt.Sprintf("%s://%s%s", c.protocol, c.Domain, "/api/v1/repository")
+	url := fmt.Sprintf("%s://%s%s", c.protocol, c.Domain, repository.Resource.BaseRelativePath)
 	resp, err := c.Client.Get(url)
 	if err != nil {
 		awesome_error.CheckErr(err)
@@ -54,5 +59,21 @@ func (c *DkdkClient) RepositoryList() (err error) {
 	}
 	//var repositoryConfigResponse []model.RepositoryConfigResponse
 	log.Logger.Info(string(content))
+	return
+}
+
+func (c *DkdkClient) BatchTaskCreate(tasks []model.TaskCore) (err error) {
+	url := fmt.Sprintf("%s://%s%s", c.protocol, c.Domain, v1.TaskResource.BaseRelativePath)
+	content, err := json.Marshal(tasks)
+	if err != nil {
+		awesome_error.CheckErr(err)
+		return
+	}
+	body := bytes.NewReader(content)
+	_, err = c.Client.Post(url, "text/json", body)
+	if err != nil {
+		awesome_error.CheckErr(err)
+		return
+	}
 	return
 }
