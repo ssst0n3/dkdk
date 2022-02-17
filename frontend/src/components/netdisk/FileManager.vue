@@ -73,7 +73,7 @@
         </div>
       </template>
       <template #cell(size)="row">
-        {{formatBytes(row.item.size)}}
+        <span v-if="row.item.size!==undefined">{{formatBytes(row.item.size)}}</span>
       </template>
       <template #cell(action)="row">
         <Download v-if="row.item.type===consts.Model.node.type.file"
