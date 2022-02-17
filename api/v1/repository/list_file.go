@@ -73,6 +73,7 @@ func ListFileByRepositoryId(c *gin.Context) {
 				},
 				Size: layer.Size,
 			},
+			FilenameInRepository: filename,
 		})
 	}
 	exists, err := database.DigestExists(digests)

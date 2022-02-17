@@ -74,7 +74,8 @@ func TestUploadRepositoryFile(t *testing.T) {
 			},
 			Size: 1000,
 		},
-		DirectoryId: test_data.NodeA.ContentId,
+		FilenameInRepository: "new_upload_file_in_repo",
+		DirectoryId:          test_data.NodeA.ContentId,
 	}
 	id, err := UploadRepositoryFile(test_data.RepositoryA.ID, test_data.UserAdmin.ID, body, "")
 	assert.NoError(t, err)

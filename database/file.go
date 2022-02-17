@@ -74,10 +74,11 @@ func UploadRepositoryFile(repositoryId uint, userId uint, body model.UploadRepos
 		}
 	}
 	file := model.File{
-		FileItem:        body.FileItem,
-		UserId:          userId,
-		RepositoryId:    repositoryId,
-		ArchivePassword: password,
+		FileItem:             body.FileItem,
+		UserId:               userId,
+		RepositoryId:         repositoryId,
+		ArchivePassword:      password,
+		FilenameInRepository: body.FilenameInRepository,
 	}
 
 	exists, id, err := CheckFileAlreadyUnderDir(file, body.DirectoryId)

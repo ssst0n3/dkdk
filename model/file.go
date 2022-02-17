@@ -22,8 +22,9 @@ type FileItem struct {
 
 type ResponseListFileUnderRepository struct {
 	FileItem
-	FilenameInDkdk string `json:"filename_in_dkdk"`
-	InNetDisk      bool   `json:"in_net_disk"`
+	FilenameInRepository string `json:"filename_in_repository"`
+	FilenameInDkdk       string `json:"filename_in_dkdk"`
+	InNetDisk            bool   `json:"in_net_disk"`
 }
 
 type ResponseCheckFilenameAlreadyExists struct {
@@ -32,7 +33,8 @@ type ResponseCheckFilenameAlreadyExists struct {
 
 type UploadRepositoryFileBody struct {
 	FileItem
-	DirectoryId uint `json:"directory_id"`
+	FilenameInRepository string `json:"filename_in_repository"`
+	DirectoryId          uint   `json:"directory_id"`
 }
 
 type File struct {
