@@ -63,7 +63,7 @@ func (c *DkdkClient) RepositoryList() (err error) {
 }
 
 func (c *DkdkClient) BatchTaskCreate(tasks []model.TaskCore) (err error) {
-	url := fmt.Sprintf("%s://%s%s", c.protocol, c.Domain, v1.TaskResource.BaseRelativePath)
+	url := fmt.Sprintf("%s://%s%s/batch/create", c.protocol, c.Domain, v1.TaskResource.BaseRelativePath)
 	content, err := json.Marshal(tasks)
 	if err != nil {
 		awesome_error.CheckErr(err)
