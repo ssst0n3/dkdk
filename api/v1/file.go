@@ -1,6 +1,7 @@
 package v1
 
 import (
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/ssst0n3/dkdk/api/v1/repository"
 	"github.com/ssst0n3/dkdk/database"
@@ -37,6 +38,21 @@ func ListFileUnderDir(c *gin.Context) {
 		return
 	}
 	c.JSON(http.StatusOK, files)
+}
+
+func CheckFilenameAlreadyExists(c *gin.Context) {
+	filename := c.Param("filename")
+	if filename == "" {
+		lightweight_api.HandleStatusBadRequestError(c, fmt.Errorf("filename cannot be empty"))
+		return
+	}
+	exists, err := database.CheckFilenameAlreadyExists(filename)
+	if err != nil {
+		lightweight_api.HandleInternalServerError(c, err)
+		return
+	}
+	resp := model.ResponseCheckFilenameAlreadyExists{Exists: exists}
+	c.JSON(http.StatusOK, resp)
 }
 
 func UploadRepositoryFileToDirectory(c *gin.Context) {

@@ -170,3 +170,16 @@ func UpdateFileDownloadCount(dsg digest.Digest) (err error) {
 	}
 	return
 }
+
+func CheckFilenameAlreadyExists(filename string) (exists bool, err error) {
+	var count int64
+	err = DB.Model(&model.File{}).Where(&model.File{
+		FilenameInRepository: filename,
+	}).Count(&count).Error
+	if err != nil {
+		awesome_error.CheckErr(err)
+		return
+	}
+	exists = count > 0
+	return
+}
