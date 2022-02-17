@@ -51,7 +51,7 @@ func InitRouter(router *gin.Engine) {
 	fileGroup := router.Group(FileResource.BaseRelativePath, middleware.JwtUser())
 	{
 		fileGroup.GET("", FileResource.ListResource)
-		fileGroup.GET("/:id", ListFileUnderDir)
+		fileGroup.GET("/dir/:id", ListFileUnderDir)
 		fileGroup.GET("/exists", CheckFilenameAlreadyExists)
 		fileGroup.POST("/repository/:id", UploadRepositoryFileToDirectory)
 	}

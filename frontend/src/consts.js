@@ -52,7 +52,7 @@ export default {
             },
             file: {
                 file: api.v1.file,
-                listFileUnderDir: (id) => `${api.v1.file}/${id}`,
+                listFileUnderDir: (id) => `${api.v1.file}/dir/${id}`,
                 UploadRepositoryFileToDirectory: (id) => `${api.v1.file}/repository/${id}`,
             },
             node: api.v1.node

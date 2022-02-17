@@ -72,6 +72,9 @@
           </span>
         </div>
       </template>
+      <template #cell(size)="row">
+        {{formatBytes(row.item.size)}}
+      </template>
       <template #cell(action)="row">
         <Download v-if="row.item.type===consts.Model.node.type.file"
                   :repositoryId="row.item.repository_id" :digest="row.item.digest"
@@ -216,6 +219,17 @@ export default {
     },
     hide() {
       this.items.splice(this.items.indexOf(this.selected[0]))
+    },
+    formatBytes(bytes, decimals = 6) {
+      if (bytes === 0) return '0 Bytes';
+
+      const k = 1024;
+      const dm = decimals < 0 ? 0 : decimals;
+      const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
     }
   },
 }
