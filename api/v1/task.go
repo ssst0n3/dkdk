@@ -79,10 +79,16 @@ func BatchCreateTask(c *gin.Context) {
 		lightweight_api.HandleStatusBadRequestError(c, err)
 		return
 	}
-	err = database.BatchCreateTask(tasks, userId)
+	for i := range tasks {
+		tasks[i].UserId = userId
+	}
+	err = database.BatchCreateTask(tasks)
 	if err != nil {
 		lightweight_api.HandleInternalServerError(c, err)
 		return
+	}
+	for _, task := range tasks {
+		offline_download.ChanTask <- task
 	}
 	c.Status(http.StatusOK)
 }

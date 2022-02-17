@@ -43,6 +43,7 @@ export default {
             task: {
                 task: api.v1.task,
                 action: (id) => `${api.v1.task}/action/${id}`,
+                batchTaskCreate: `${api.v1.task}/batch/create`,
             },
             directory: {
                 directory: api.v1.directory,
